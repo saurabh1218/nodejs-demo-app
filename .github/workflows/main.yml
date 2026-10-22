@@ -18,7 +18,6 @@ steps:
 - name: Checkout repository
 uses: actions/checkout@v4
 
-
   - name: Setup Node.js
     uses: actions/setup-node@v4
     with:
@@ -31,7 +30,6 @@ uses: actions/checkout@v4
   - name: Run tests
     run: npm test
 
-
 docker:
 needs: test
 if: github.event_name == 'push' && github.ref == 'refs/heads/main'
@@ -39,7 +37,6 @@ runs-on: ubuntu-latest
 steps:
 - name: Checkout repository
 uses: actions/checkout@v4
-
 
   - name: Set up Docker Buildx
     uses: docker/setup-buildx-action@v3
@@ -56,4 +53,3 @@ uses: actions/checkout@v4
       context: .
       push: true
       tags: saurabh1218/nodejs-demo-app:latest
-
