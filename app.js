@@ -4,7 +4,7 @@ const PORT = process.env.PORT || 3000;
 
 const server = http.createServer((req, res) => {
 res.writeHead(200, { 'Content-Type': 'text/plain' });
-res.end('Hello from my DevOps Internship CI/CD Project!')
+res.end('Hello from my DevOps Internship CI/CD Project!');
 });
 
 if (require.main === module) {
